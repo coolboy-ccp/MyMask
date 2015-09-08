@@ -15,6 +15,9 @@
 		008EFCEC1B9D3A7200045700 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008EFCEB1B9D3A7200045700 /* Images.xcassets */; };
 		008EFCEF1B9D3A7200045700 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008EFCED1B9D3A7200045700 /* LaunchScreen.xib */; };
 		008EFCFB1B9D3A7200045700 /* MyMaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EFCFA1B9D3A7200045700 /* MyMaskTests.m */; };
+		008EFD061B9D3A9500045700 /* CircleBTN.m in Sources */ = {isa = PBXBuildFile; fileRef = 008EFD051B9D3A9500045700 /* CircleBTN.m */; };
+		008EFD081B9D8F4C00045700 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008EFD071B9D8F4C00045700 /* AddressBook.framework */; };
+		008EFD0A1B9D920D00045700 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008EFD091B9D920D00045700 /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,10 @@
 		008EFCF41B9D3A7200045700 /* MyMaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		008EFCF91B9D3A7200045700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008EFCFA1B9D3A7200045700 /* MyMaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMaskTests.m; sourceTree = "<group>"; };
+		008EFD041B9D3A9500045700 /* CircleBTN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleBTN.h; sourceTree = "<group>"; };
+		008EFD051B9D3A9500045700 /* CircleBTN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleBTN.m; sourceTree = "<group>"; };
+		008EFD071B9D8F4C00045700 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		008EFD091B9D920D00045700 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008EFD0A1B9D920D00045700 /* AddressBookUI.framework in Frameworks */,
+				008EFD081B9D8F4C00045700 /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,8 @@
 		008EFCCF1B9D3A7200045700 = {
 			isa = PBXGroup;
 			children = (
+				008EFD091B9D920D00045700 /* AddressBookUI.framework */,
+				008EFD071B9D8F4C00045700 /* AddressBook.framework */,
 				008EFCDA1B9D3A7200045700 /* MyMask */,
 				008EFCF71B9D3A7200045700 /* MyMaskTests */,
 				008EFCD91B9D3A7200045700 /* Products */,
@@ -87,6 +98,8 @@
 				008EFCE01B9D3A7200045700 /* AppDelegate.m */,
 				008EFCE51B9D3A7200045700 /* ViewController.h */,
 				008EFCE61B9D3A7200045700 /* ViewController.m */,
+				008EFD041B9D3A9500045700 /* CircleBTN.h */,
+				008EFD051B9D3A9500045700 /* CircleBTN.m */,
 				008EFCE81B9D3A7200045700 /* Main.storyboard */,
 				008EFCEB1B9D3A7200045700 /* Images.xcassets */,
 				008EFCED1B9D3A7200045700 /* LaunchScreen.xib */,
@@ -224,6 +237,7 @@
 			files = (
 				008EFCE11B9D3A7200045700 /* AppDelegate.m in Sources */,
 				008EFCDE1B9D3A7200045700 /* main.m in Sources */,
+				008EFD061B9D3A9500045700 /* CircleBTN.m in Sources */,
 				008EFCE71B9D3A7200045700 /* ViewController.m in Sources */,
 				008EFCE41B9D3A7200045700 /* MyMask.xcdatamodeld in Sources */,
 			);
@@ -351,9 +365,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiangyang li (DRQX5JH3WJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiangyang li (DRQX5JH3WJ)";
 				INFOPLIST_FILE = MyMask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf7632b5-1186-4818-9197-5b87a8db11fb";
 			};
 			name = Debug;
 		};
@@ -361,9 +378,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiangyang li (DRQX5JH3WJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiangyang li (DRQX5JH3WJ)";
 				INFOPLIST_FILE = MyMask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf7632b5-1186-4818-9197-5b87a8db11fb";
 			};
 			name = Release;
 		};
@@ -420,6 +440,7 @@
 				008EFD001B9D3A7200045700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		008EFD011B9D3A7200045700 /* Build configuration list for PBXNativeTarget "MyMaskTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +449,7 @@
 				008EFD031B9D3A7200045700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
